@@ -1,6 +1,5 @@
 (function(){
 'use strict'
-
 var app = angular.module('flickrApp', ['ngMaterial', 'ngAnimate'])
     .config(function($mdThemingProvider) {
       $mdThemingProvider.theme('default')
@@ -14,7 +13,6 @@ var app = angular.module('flickrApp', ['ngMaterial', 'ngAnimate'])
         'default': '200'
       });
     });
-
     app.controller('ListController', ['$scope', '$http', function($scope, $http){
       $scope.results = [];
       $scope.remove = function(index){
