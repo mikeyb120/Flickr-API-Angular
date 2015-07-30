@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.o, minimum-scale=1.0"/>
+    <title>Flickr Angular WebApp</title>
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.3.0/animate.min.css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>    <link rel="stylesheet" href="style.css">
+  </head>
+  <!-- START ANGULAR APP -->
+  <body ng-app="flickrApp" ng-controller="ListController" layout="column" layout-align="top center">
+<!-- START NAV -->
+    <md-toolbar layout="row">
+      <div class="md-toolbar-tools">
+        <div flex="25"><a href="http://michaelbrassfield.com" target ="_blank">Michael Brassfield</a></div>
+          <div flex="50" class="appTitle">Flickr API Demo</div>
+        <div flex class="gitHub"><a href="https://github.com/mikeyb120" target ="_blank">View on GitHub</a></div>
+      </div>
+    </md-toolbar>
+<!-- END NAV-->
+<!-- START MAIN CONTENT PHOTO STREAM -->
+  <md-content layout="column" layout-align=" center center">
+    <div class="app-content">
+      <md-card ng-repeat="picture in results.photos.photo" ng-animate=" 'animate' ">
+        <img ng-src="https://farm{{picture.farm}}.staticflickr.com/{{picture.server}}/{{picture.id}}_{{picture.secret}}_b.jpg" alt="picture.title" class="md-card-image"/>
+        <h1>{{picture.title}}</h1>
+        <md-button ng-click="remove($index)" class="removeBtn">Delete</md-button>
+      </md-card>
+    </div>
+  </md-content>
+<!-- END MAIN CONTENT PHOTO STREAM -->
+<!-- LOAD JS FILES -->
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.min.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="bower_components/hammerjs/hammer.min.js"></script>
+    <script src="bower_components/angular-material/angular-material.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+  <!-- END ANGULAR APP -->
+</html>

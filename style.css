@@ -1,0 +1,105 @@
+/*////////////////////////////
+SET UP STYLES & TEXT
+///////////////////////////*/
+
+body {
+  color: white;
+}
+
+h1 {
+  position: absolute;
+  margin: -7.3% 0 0 0;
+  padding: 5px 16px;
+  font: 5vw/120% 'Open Sans', sans-serif;
+  text-transform: uppercase;
+}
+
+/*////////////////////////////
+MY CLASSES
+///////////////////////////*/
+
+.gitHub{
+  text-align: right;
+}
+
+.appTitle{
+  text-align: center;
+  color: #d9534f;
+  font-size: 28px;
+  line-height: 100%;
+  font-weight: 600;
+}
+
+/*////////////////////////////
+ANGULAR OVERRIDES
+///////////////////////////*/
+
+md-toolbar {
+  color: white;
+}
+
+md-card {
+    margin: 0;
+}
+
+md-card .md-card-image {
+    border-radius: 2px 2px 0 0;
+    margin-bottom: -10px;
+}
+
+/*////////////////////////////
+BUTTONS & INTERACTIVITY ELEMENTS
+///////////////////////////*/
+
+a {
+  position: relative;
+}
+
+a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+ a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.removeBtn {
+  width: 3vw !important;
+  background: #d9534f;
+  position: absolute;
+  -ms-transform: translateY(-140%);
+  -webkit-transform: translateY(-140%);
+  transform: translateY(-140%);
+  right: 0;
+  min-width: 65px;
+}
+
+.md-button:not([disabled]):hover {
+  opacity: 1;
+  background: #b9534f;
+}
+
+/*////////////////////////////
+ANIMATIONS
+///////////////////////////*/
+
+md-card.ng-enter {
+	animation: fadeInUpBig .75s;
+}
+
+md-card.ng-leave {
+	animation: fadeOutUpBig 1s;
+}
