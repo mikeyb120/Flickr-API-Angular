@@ -13,7 +13,7 @@
     "Michael Brassfield"
   ],
   "license": "MIT",
-  "homepage": "http://www.wannagoyo.com/flickr",
+  "homepage": "http://www.michaelbrassfield.com/flickr",
   "ignore": [
     "**/.*",
     "node_modules",
